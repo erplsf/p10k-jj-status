@@ -9,7 +9,7 @@ typeset -g POWERLEVEL9K_JJ_STATUS_COMMAND=(
         separate(" ",
           if(immutable, label("immutable", "◆")),
           if(conflict, label("conflict", "×")),
-          format_short_change_id_with_hidden_and_divergent_info(self),
+          format_short_change_id_with_change_offset(self),
           truncate_end(18, bookmarks, "…"),
           tags,
           working_copies,
